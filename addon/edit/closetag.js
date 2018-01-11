@@ -100,7 +100,7 @@
     var ranges = cm.listSelections(), replacements = [];
     var head = typingSlash ? "/" : "</";
     var opt = cm.getOption("autoCloseTags");
-    var dontIndentOnAutoClose = (typeof opt == "object" && opt.dontIndentOnSlash);
+    var dontIndentOnAutoClose = (typeof opt == "object" && opt.dontIndentOnAutoClose);
     for (var i = 0; i < ranges.length; i++) {
       if (!ranges[i].empty()) return CodeMirror.Pass;
       var pos = ranges[i].head, tok = cm.getTokenAt(pos);
